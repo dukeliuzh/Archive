@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.5'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
@@ -31,6 +31,7 @@ gem 'phony_rails' # Include phony_rails after mongoid (if you use mongoid, see i
 gem 'shoppe', '~> 1.0'
 
 gem "shoppe-stripe", require: "shoppe/stripe"
+gem "shoppe-paypal"
 
 
 gem "jquery-ui-rails"
