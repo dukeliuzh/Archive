@@ -13,16 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160426032950) do
 
-  create_table "identities", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.string   "provider",   limit: 255
-    t.string   "uid",        limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
-
   create_table "nifty_key_value_store", force: :cascade do |t|
     t.integer "parent_id",   limit: 4
     t.string  "parent_type", limit: 255
@@ -31,58 +21,10 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.string  "value",       limit: 255
   end
 
-  create_table "options", force: :cascade do |t|
-    t.boolean  "needride",   limit: 1
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "p1",         limit: 255
-    t.string   "p2",         limit: 255
-    t.string   "p3",         limit: 255
-    t.string   "p4",         limit: 255
-    t.string   "p5",         limit: 255
-    t.date     "d1"
-    t.date     "d2"
-    t.date     "d3"
-    t.date     "d4"
-    t.date     "d5"
-  end
-
-  create_table "packages", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.integer  "area",       limit: 4
-    t.integer  "duration",   limit: 4
-    t.integer  "start",      limit: 4
-    t.integer  "end",        limit: 4
-    t.float    "price",      limit: 24
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "reservations", force: :cascade do |t|
-    t.string   "firstnameu",          limit: 255
-    t.string   "lastnameu",           limit: 255
-    t.integer  "option_id",           limit: 4
-    t.string   "email",               limit: 255
-    t.string   "phone",               limit: 255
-    t.date     "birthday"
-    t.string   "country",             limit: 255
-    t.string   "address",             limit: 255
-    t.string   "city",                limit: 255
-    t.string   "state",               limit: 255
-    t.integer  "zipcode",             limit: 4
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
-    t.integer  "gender",              limit: 4,     default: 1
-    t.text     "notification_params", limit: 65535
-    t.string   "status",              limit: 255
-    t.string   "transaction_id",      limit: 255
-    t.datetime "purchased_at"
-  end
-
   create_table "shoppe_addresses", force: :cascade do |t|
     t.integer  "customer_id",  limit: 4
     t.string   "address_type", limit: 255
-    t.boolean  "default",      limit: 1
+    t.boolean  "default"
     t.string   "address1",     limit: 255
     t.string   "address2",     limit: 255
     t.string   "address3",     limit: 255
@@ -115,7 +57,7 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.string  "continent", limit: 255
     t.string  "tld",       limit: 255
     t.string  "currency",  limit: 255
-    t.boolean "eu_member", limit: 1,   default: false
+    t.boolean "eu_member",             default: false
   end
 
   create_table "shoppe_customers", force: :cascade do |t|
@@ -150,8 +92,8 @@ ActiveRecord::Schema.define(version: 20160426032950) do
   create_table "shoppe_delivery_services", force: :cascade do |t|
     t.string   "name",         limit: 255
     t.string   "code",         limit: 255
-    t.boolean  "default",      limit: 1,   default: false
-    t.boolean  "active",       limit: 1,   default: true
+    t.boolean  "default",                  default: false
+    t.boolean  "active",                   default: true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "courier",      limit: 255
@@ -208,7 +150,7 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.integer  "rejected_by",               limit: 4
     t.string   "ip_address",                limit: 255
     t.text     "notes",                     limit: 65535
-    t.boolean  "separate_delivery_address", limit: 1,                             default: false
+    t.boolean  "separate_delivery_address",                                       default: false
     t.string   "delivery_name",             limit: 255
     t.string   "delivery_address1",         limit: 255
     t.string   "delivery_address2",         limit: 255
@@ -217,7 +159,7 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.string   "delivery_postcode",         limit: 255
     t.integer  "delivery_country_id",       limit: 4
     t.decimal  "amount_paid",                             precision: 8, scale: 2, default: 0.0
-    t.boolean  "exported",                  limit: 1,                             default: false
+    t.boolean  "exported",                                                        default: false
     t.string   "invoice_number",            limit: 255
     t.integer  "customer_id",               limit: 4
   end
@@ -231,11 +173,11 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.decimal  "amount",                        precision: 8, scale: 2, default: 0.0
     t.string   "reference",         limit: 255
     t.string   "method",            limit: 255
-    t.boolean  "confirmed",         limit: 1,                           default: true
-    t.boolean  "refundable",        limit: 1,                           default: false
+    t.boolean  "confirmed",                                             default: true
+    t.boolean  "refundable",                                            default: false
     t.decimal  "amount_refunded",               precision: 8, scale: 2, default: 0.0
     t.integer  "parent_payment_id", limit: 4
-    t.boolean  "exported",          limit: 1,                           default: false
+    t.boolean  "exported",                                              default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -248,10 +190,10 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.string   "key",        limit: 255
     t.string   "value",      limit: 255
     t.integer  "position",   limit: 4,   default: 1
-    t.boolean  "searchable", limit: 1,   default: true
+    t.boolean  "searchable",             default: true
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "public",     limit: 1,   default: true
+    t.boolean  "public",                 default: true
   end
 
   add_index "shoppe_product_attributes", ["key"], name: "index_shoppe_product_attributes_on_key", using: :btree
@@ -269,7 +211,7 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.integer  "rgt",                          limit: 4
     t.integer  "depth",                        limit: 4
     t.string   "ancestral_permalink",          limit: 255
-    t.boolean  "permalink_includes_ancestors", limit: 1,     default: false
+    t.boolean  "permalink_includes_ancestors",               default: false
   end
 
   add_index "shoppe_product_categories", ["lft"], name: "index_shoppe_product_categories_on_lft", using: :btree
@@ -318,17 +260,17 @@ ActiveRecord::Schema.define(version: 20160426032950) do
     t.string   "permalink",         limit: 255
     t.text     "description",       limit: 65535
     t.text     "short_description", limit: 65535
-    t.boolean  "active",            limit: 1,                             default: true
+    t.boolean  "active",                                                  default: true
     t.decimal  "weight",                          precision: 8, scale: 3, default: 0.0
     t.decimal  "price",                           precision: 8, scale: 2, default: 0.0
     t.decimal  "cost_price",                      precision: 8, scale: 2, default: 0.0
     t.integer  "tax_rate_id",       limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "featured",          limit: 1,                             default: false
+    t.boolean  "featured",                                                default: false
     t.text     "in_the_box",        limit: 65535
-    t.boolean  "stock_control",     limit: 1,                             default: true
-    t.boolean  "default",           limit: 1,                             default: false
+    t.boolean  "stock_control",                                           default: true
+    t.boolean  "default",                                                 default: false
   end
 
   add_index "shoppe_products", ["parent_id"], name: "index_shoppe_products_on_parent_id", using: :btree
@@ -377,26 +319,4 @@ ActiveRecord::Schema.define(version: 20160426032950) do
 
   add_index "shoppe_users", ["email_address"], name: "index_shoppe_users_on_email_address", using: :btree
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
-    t.string   "provider",               limit: 255
-    t.string   "uid",                    limit: 255
-    t.string   "name",                   limit: 255
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  add_foreign_key "identities", "users"
 end
