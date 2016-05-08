@@ -149,7 +149,7 @@ GEM
     fog-serverlove (0.1.2)
       fog-core
       fog-json
-    fog-softlayer (1.1.0)
+    fog-softlayer (1.1.1)
       fog-core
       fog-json
     fog-storm_on_demand (0.1.1)
@@ -202,7 +202,7 @@ GEM
     mini_magick (4.2.10)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    multi_json (1.11.3)
+    multi_json (1.12.0)
     mysql2 (0.3.20)
     net-ssh (3.0.2)
     netrc (0.11.0)
