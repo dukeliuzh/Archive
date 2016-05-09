@@ -353,7 +353,7 @@
                     </div>
                 </div>
                 <div class="sp-thumbnails">
-                    <img alt="" class="sp-thumbnail" src="/images/slider_single_tour/1_medium.jpg">
+                    <img alt=""  id="image_1" class="sp-thumbnail">
                 </div>
             </div>
             
@@ -753,6 +753,14 @@
     </div>
 </div><!-- End modal review -->
 
+<script type="text/javascript">
+    var str1 = '/images/product/' ;
+    var str2 = "<%= j @product.permalink %>" ;
+    var str3 = '/1_medium.jpg' ;
+    var img_str = str1 + str2 + str3 ;
+    document.getElementById('image_1').src = img_str ;
+</script>
+
  <!-- Common scripts -->
 <script src="/javascripts/jquery-1.11.2.min.js"></script>
 <script src="/javascripts/common_scripts_min.js"></script>
@@ -797,6 +805,8 @@ $('input').iCheck({
     showInpunts: false
 })
   </script>
+
+
   
 <!--Review modal validation -->
 <script src="/assets/validate.js"></script>

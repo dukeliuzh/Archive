@@ -19361,3 +19361,1957 @@ Processing by ProductsController#index as HTML
   [1m[35mShoppe::Order Load (0.4ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 14 LIMIT 1
   [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (14)[0m
 Completed 200 OK in 80ms (Views: 69.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-08 19:47:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mSQL (1.9ms)[0m  SELECT `shoppe_products`.`id` AS t0_r0, `shoppe_products`.`parent_id` AS t0_r1, `shoppe_products`.`name` AS t0_r2, `shoppe_products`.`sku` AS t0_r3, `shoppe_products`.`permalink` AS t0_r4, `shoppe_products`.`description` AS t0_r5, `shoppe_products`.`short_description` AS t0_r6, `shoppe_products`.`active` AS t0_r7, `shoppe_products`.`weight` AS t0_r8, `shoppe_products`.`price` AS t0_r9, `shoppe_products`.`cost_price` AS t0_r10, `shoppe_products`.`tax_rate_id` AS t0_r11, `shoppe_products`.`created_at` AS t0_r12, `shoppe_products`.`updated_at` AS t0_r13, `shoppe_products`.`featured` AS t0_r14, `shoppe_products`.`in_the_box` AS t0_r15, `shoppe_products`.`stock_control` AS t0_r16, `shoppe_products`.`default` AS t0_r17, `shoppe_product_translations`.`id` AS t1_r0, `shoppe_product_translations`.`shoppe_product_id` AS t1_r1, `shoppe_product_translations`.`locale` AS t1_r2, `shoppe_product_translations`.`created_at` AS t1_r3, `shoppe_product_translations`.`updated_at` AS t1_r4, `shoppe_product_translations`.`name` AS t1_r5, `shoppe_product_translations`.`permalink` AS t1_r6, `shoppe_product_translations`.`description` AS t1_r7, `shoppe_product_translations`.`short_description` AS t1_r8, `shoppe_product_categories`.`id` AS t2_r0, `shoppe_product_categories`.`name` AS t2_r1, `shoppe_product_categories`.`permalink` AS t2_r2, `shoppe_product_categories`.`description` AS t2_r3, `shoppe_product_categories`.`created_at` AS t2_r4, `shoppe_product_categories`.`updated_at` AS t2_r5, `shoppe_product_categories`.`parent_id` AS t2_r6, `shoppe_product_categories`.`lft` AS t2_r7, `shoppe_product_categories`.`rgt` AS t2_r8, `shoppe_product_categories`.`depth` AS t2_r9, `shoppe_product_categories`.`ancestral_permalink` AS t2_r10, `shoppe_product_categories`.`permalink_includes_ancestors` AS t2_r11, `variants_shoppe_products`.`id` AS t3_r0, `variants_shoppe_products`.`parent_id` AS t3_r1, `variants_shoppe_products`.`name` AS t3_r2, `variants_shoppe_products`.`sku` AS t3_r3, `variants_shoppe_products`.`permalink` AS t3_r4, `variants_shoppe_products`.`description` AS t3_r5, `variants_shoppe_products`.`short_description` AS t3_r6, `variants_shoppe_products`.`active` AS t3_r7, `variants_shoppe_products`.`weight` AS t3_r8, `variants_shoppe_products`.`price` AS t3_r9, `variants_shoppe_products`.`cost_price` AS t3_r10, `variants_shoppe_products`.`tax_rate_id` AS t3_r11, `variants_shoppe_products`.`created_at` AS t3_r12, `variants_shoppe_products`.`updated_at` AS t3_r13, `variants_shoppe_products`.`featured` AS t3_r14, `variants_shoppe_products`.`in_the_box` AS t3_r15, `variants_shoppe_products`.`stock_control` AS t3_r16, `variants_shoppe_products`.`default` AS t3_r17 FROM `shoppe_products` LEFT OUTER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` LEFT OUTER JOIN `shoppe_product_categorizations` ON `shoppe_product_categorizations`.`product_id` = `shoppe_products`.`id` LEFT OUTER JOIN `shoppe_product_categories` ON `shoppe_product_categories`.`id` = `shoppe_product_categorizations`.`product_category_id` LEFT OUTER JOIN `shoppe_products` `variants_shoppe_products` ON `variants_shoppe_products`.`parent_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL  ORDER BY shoppe_product_translations.name
+  [1m[36mShoppe::ProductCategory::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_category_translations`.* FROM `shoppe_product_category_translations` WHERE `shoppe_product_category_translations`.`shoppe_product_category_id` = 1[0m
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` = 5 LIMIT 1
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  [1m[35mShoppe::ProductCategory::Translation Load (0.2ms)[0m  SELECT `shoppe_product_category_translations`.* FROM `shoppe_product_category_translations` WHERE `shoppe_product_category_translations`.`shoppe_product_category_id` = 2
+  Rendered products/index.html.erb within layouts/application (166.7ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `shoppe_orders` (`ip_address`, `status`, `token`, `created_at`, `updated_at`) VALUES ('::1', 'building', '8c00f77a-6e78-468b-903b-c29ec63c2d86', '2016-05-09 02:47:47', '2016-05-09 02:47:47')
+  [1m[36mNifty::KeyValueStore::KeyValuePair Load (0.2ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 15 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 15 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'  [["parent_id", 15], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 600ms (Views: 421.3ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 19:47:47 -0700
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 19:47:49 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.3ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (2.0ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 62ms (Views: 44.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/product/blank.png" for ::1 at 2016-05-08 19:47:50 -0700
+Processing by ProductsController#show as PNG
+  Parameters: {"permalink"=>"blank"}
+  [1m[36mShoppe::Product Load (0.6ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'blank' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.6ms)
+
+ActionView::MissingTemplate (Missing template products/show, application/show with {:locale=>[:en], :formats=>[:png], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/Users/ninahuang/Zheng/TourJoys/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/shoppe-1.1.2/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/kaminari-0.16.3/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  shoppe (1.1.2) lib/shoppe/settings_loader.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (44.6ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:48:01 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:48:01 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 19:48:01 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 19:48:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.2ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 19:48:23 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.8ms)
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 19:48:24 -0700
+
+
+Started GET "/product/blank.png" for ::1 at 2016-05-08 19:48:24 -0700
+Processing by ProductsController#show as PNG
+  Parameters: {"permalink"=>"blank"}
+  [1m[36mShoppe::Product Load (0.4ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'blank' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+ActionView::MissingTemplate (Missing template products/show, application/show with {:locale=>[:en], :formats=>[:png], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/Users/ninahuang/Zheng/TourJoys/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/shoppe-1.1.2/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/kaminari-0.16.3/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  shoppe (1.1.2) lib/shoppe/settings_loader.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (37.5ms)
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 19:48:24 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.7ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 19:48:49 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.8ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.3ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 19:48:49 -0700
+
+
+Started GET "/product/blank.png" for ::1 at 2016-05-08 19:48:49 -0700
+Processing by ProductsController#show as PNG
+  Parameters: {"permalink"=>"blank"}
+  [1m[36mShoppe::Product Load (0.4ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'blank' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+ActionView::MissingTemplate (Missing template products/show, application/show with {:locale=>[:en], :formats=>[:png], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/Users/ninahuang/Zheng/TourJoys/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/shoppe-1.1.2/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/kaminari-0.16.3/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  shoppe (1.1.2) lib/shoppe/settings_loader.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (38.0ms)
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 19:48:49 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.2ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 19:56:01 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.8ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 19:56:01 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 19:56:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-08 23:26:08 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mSQL (2.1ms)[0m  [1mSELECT `shoppe_products`.`id` AS t0_r0, `shoppe_products`.`parent_id` AS t0_r1, `shoppe_products`.`name` AS t0_r2, `shoppe_products`.`sku` AS t0_r3, `shoppe_products`.`permalink` AS t0_r4, `shoppe_products`.`description` AS t0_r5, `shoppe_products`.`short_description` AS t0_r6, `shoppe_products`.`active` AS t0_r7, `shoppe_products`.`weight` AS t0_r8, `shoppe_products`.`price` AS t0_r9, `shoppe_products`.`cost_price` AS t0_r10, `shoppe_products`.`tax_rate_id` AS t0_r11, `shoppe_products`.`created_at` AS t0_r12, `shoppe_products`.`updated_at` AS t0_r13, `shoppe_products`.`featured` AS t0_r14, `shoppe_products`.`in_the_box` AS t0_r15, `shoppe_products`.`stock_control` AS t0_r16, `shoppe_products`.`default` AS t0_r17, `shoppe_product_translations`.`id` AS t1_r0, `shoppe_product_translations`.`shoppe_product_id` AS t1_r1, `shoppe_product_translations`.`locale` AS t1_r2, `shoppe_product_translations`.`created_at` AS t1_r3, `shoppe_product_translations`.`updated_at` AS t1_r4, `shoppe_product_translations`.`name` AS t1_r5, `shoppe_product_translations`.`permalink` AS t1_r6, `shoppe_product_translations`.`description` AS t1_r7, `shoppe_product_translations`.`short_description` AS t1_r8, `shoppe_product_categories`.`id` AS t2_r0, `shoppe_product_categories`.`name` AS t2_r1, `shoppe_product_categories`.`permalink` AS t2_r2, `shoppe_product_categories`.`description` AS t2_r3, `shoppe_product_categories`.`created_at` AS t2_r4, `shoppe_product_categories`.`updated_at` AS t2_r5, `shoppe_product_categories`.`parent_id` AS t2_r6, `shoppe_product_categories`.`lft` AS t2_r7, `shoppe_product_categories`.`rgt` AS t2_r8, `shoppe_product_categories`.`depth` AS t2_r9, `shoppe_product_categories`.`ancestral_permalink` AS t2_r10, `shoppe_product_categories`.`permalink_includes_ancestors` AS t2_r11, `variants_shoppe_products`.`id` AS t3_r0, `variants_shoppe_products`.`parent_id` AS t3_r1, `variants_shoppe_products`.`name` AS t3_r2, `variants_shoppe_products`.`sku` AS t3_r3, `variants_shoppe_products`.`permalink` AS t3_r4, `variants_shoppe_products`.`description` AS t3_r5, `variants_shoppe_products`.`short_description` AS t3_r6, `variants_shoppe_products`.`active` AS t3_r7, `variants_shoppe_products`.`weight` AS t3_r8, `variants_shoppe_products`.`price` AS t3_r9, `variants_shoppe_products`.`cost_price` AS t3_r10, `variants_shoppe_products`.`tax_rate_id` AS t3_r11, `variants_shoppe_products`.`created_at` AS t3_r12, `variants_shoppe_products`.`updated_at` AS t3_r13, `variants_shoppe_products`.`featured` AS t3_r14, `variants_shoppe_products`.`in_the_box` AS t3_r15, `variants_shoppe_products`.`stock_control` AS t3_r16, `variants_shoppe_products`.`default` AS t3_r17 FROM `shoppe_products` LEFT OUTER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` LEFT OUTER JOIN `shoppe_product_categorizations` ON `shoppe_product_categorizations`.`product_id` = `shoppe_products`.`id` LEFT OUTER JOIN `shoppe_product_categories` ON `shoppe_product_categories`.`id` = `shoppe_product_categorizations`.`product_category_id` LEFT OUTER JOIN `shoppe_products` `variants_shoppe_products` ON `variants_shoppe_products`.`parent_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL  ORDER BY shoppe_product_translations.name[0m
+  [1m[35mShoppe::ProductCategory::Translation Load (0.2ms)[0m  SELECT `shoppe_product_category_translations`.* FROM `shoppe_product_category_translations` WHERE `shoppe_product_category_translations`.`shoppe_product_category_id` = 1
+  [1m[36mShoppe::Product Load (0.1ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` = 5 LIMIT 1[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+  [1m[36mShoppe::ProductCategory::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_category_translations`.* FROM `shoppe_product_category_translations` WHERE `shoppe_product_category_translations`.`shoppe_product_category_id` = 2[0m
+  Rendered products/index.html.erb within layouts/application (11.3ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+Completed 200 OK in 65ms (Views: 55.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:26:08 -0700
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:26:12 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.5ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:26:33 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:26:33 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:26:33 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:26:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.9ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:27:38 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[36mShoppe::Product Load (0.3ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.2ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:27:38 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:27:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.0ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:31:59 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.4ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.3ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:31:59 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:31:59 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.0ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:39:45 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[36mShoppe::Product Load (0.4ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.2ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:39:45 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:39:45 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.8ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:40:11 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.5ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:40:11 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:40:11 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.6ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:41:12 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[36mShoppe::Product Load (0.3ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.1ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:41:12 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:41:12 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.1ms)
+
+
+Started GET "/images/product/1_medium.jpg" for ::1 at 2016-05-08 23:41:12 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/product/1_medium.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.4ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:41:20 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:41:20 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:41:20 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.9ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:51:09 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[36mShoppe::Product Load (0.3ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.1ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.3ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:51:10 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:51:10 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.6ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:57:30 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:57:30 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:57:30 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.4ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-08 23:57:56 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[36mShoppe::Product Load (0.3ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.1ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)
+  Rendered products/show.html.erb within layouts/application (1.7ms)
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-08 23:57:56 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-08 23:57:56 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.1ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-09 00:01:39 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)[0m
+  Rendered products/show.html.erb within layouts/application (1.8ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-09 00:01:39 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-09 00:01:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.4ms)
+
+
+Started GET "/product/yealink-t20p" for ::1 at 2016-05-09 00:01:49 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t20p"}
+  [1m[36mShoppe::Product Load (0.3ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t20p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.1ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (1)
+  Rendered products/show.html.erb within layouts/application (1.8ms)
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 15 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (15)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-09 00:01:49 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-09 00:01:49 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.3ms)
