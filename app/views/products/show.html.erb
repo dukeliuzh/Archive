@@ -344,16 +344,16 @@
                 <div class="sp-slides">
                 
                     <div class="sp-slide">
-                        <img alt="" class="sp-image" src="/stylesheets/images/blank.gif" 
+                        <img id="imagelarge1" alt="" class="sp-image" src="/stylesheets/images/blank.gif" 
                         data-src="/images/slider_single_tour/1_medium.jpg" 
                         data-small="/images/slider_single_tour/1_small.jpg" 
                         data-medium="/images/slider_single_tour/1_medium.jpg" 
                         data-large="/images/slider_single_tour/1_large.jpg" 
-                        data-retina="/images/slider_single_tour/1_large.jpg">
+                        data-retina="">
                     </div>
                 </div>
                 <div class="sp-thumbnails">
-                    <img alt=""  id="image_1" class="sp-thumbnail">
+                    <img alt=""  id="image_sli_1" class="sp-thumbnail">
                 </div>
             </div>
             
@@ -753,21 +753,29 @@
     </div>
 </div><!-- End modal review -->
 
-<script type="text/javascript">
-    var str1 = '/images/product/' ;
-    var str2 = "<%= j @product.permalink %>" ;
-    var str3 = '/1_medium.jpg' ;
-    var img_str = str1 + str2 + str3 ;
-    document.getElementById('image_1').src = img_str ;
-</script>
-
  <!-- Common scripts -->
 <script src="/javascripts/jquery-1.11.2.min.js"></script>
 <script src="/javascripts/common_scripts_min.js"></script>
 <script src="/javascripts/functions.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
  <!-- Specific scripts -->
 <script src="/javascripts/icheck.js"></script>
+
+
+<script type="text/javascript">
+    var str1 = '/images/product/' ;
+    var str2 = "<%= j @product.permalink %>" ;
+    var str3 = '/1_medium.jpg' ;
+    var str4 = '/1_large.jpg' ;
+    var img_str = str1 + str2 + str3 ;
+    var src_str = str1 + str2 + str4 ;
+
+    document.getElementById('image_sli_1').src = img_str ;
+    document.getElementById("imagelarge1").setAttribute('data-retina', src_str);
+
+</script>
+
 <script>
 $('input').iCheck({
    checkboxClass: 'icheckbox_square-grey',
