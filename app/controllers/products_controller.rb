@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Shoppe::Product.root.find_by_permalink(params[:permalink])
+    @path = "/static/product/" +   @product.permalink  + "/feature.html.erb"
   end
 
   def buy
