@@ -28422,3 +28422,849 @@ ActionView::Template::Error (Missing template static/product/yealink-t26p/templa
   Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
   Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.9ms)
+
+
+Started GET "/product/yealink-t46gn" for ::1 at 2016-05-10 21:34:45 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t46gn"}
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t46gn' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (4)[0m
+  [1m[35mShoppe::Attachment Load (0.2ms)[0m  SELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 4 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 4 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1[0m  [["parent_id", 4], ["parent_type", "Shoppe::Product"], ["role", "default_image"]]
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 4
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  Rendered products/show.html.erb within layouts/application (31.4ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 12.6ms)
+
+ActionView::Template::Error (Missing template static/product/yealink-t46gn/feature.html.erb with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/Users/ninahuang/Zheng/TourJoys/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/shoppe-1.1.2/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/kaminari-0.16.3/app/views"
+  * "/Users/ninahuang/Zheng/TourJoys"
+  * "/"
+):
+    16: 
+    17: <p><%= link_to "Back to list", root_path %></p>
+    18: 
+    19: <%= render :file => @path  %>
+  app/views/products/show.html.erb:19:in `_app_views_products_show_html_erb___874533560673534840_70338317222180'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+
+
+Started GET "/product/yealink-t46gn" for ::1 at 2016-05-10 21:34:45 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t46gn"}
+  [1m[35mShoppe::Product Load (0.4ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t46gn' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.3ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (4)[0m
+  [1m[35mShoppe::Attachment Load (0.3ms)[0m  SELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 4 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 4 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1[0m  [["parent_id", 4], ["parent_type", "Shoppe::Product"], ["role", "default_image"]]
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 4
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  Rendered products/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (Missing template static/product/yealink-t46gn/feature.html.erb with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/Users/ninahuang/Zheng/TourJoys/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/shoppe-1.1.2/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/kaminari-0.16.3/app/views"
+  * "/Users/ninahuang/Zheng/TourJoys"
+  * "/"
+):
+    16: 
+    17: <p><%= link_to "Back to list", root_path %></p>
+    18: 
+    19: <%= render :file => @path  %>
+  app/views/products/show.html.erb:19:in `_app_views_products_show_html_erb___874533560673534840_70338349790580'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.8ms)
+
+
+Started GET "/product/yealink-t22p" for ::1 at 2016-05-10 21:34:49 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t22p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t22p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.1ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (2)[0m
+  [1m[35mShoppe::Attachment Load (0.2ms)[0m  SELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 2 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 2 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1[0m  [["parent_id", 2], ["parent_type", "Shoppe::Product"], ["role", "default_image"]]
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  Rendered static/product/yealink-t22p/feature.html.erb (0.3ms)
+  Rendered products/show.html.erb within layouts/application (5.9ms)
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)[0m
+Completed 200 OK in 126ms (Views: 69.1ms | ActiveRecord: 54.3ms)
+
+
+Started POST "/product/yealink-t22p" for ::1 at 2016-05-10 21:34:52 -0700
+Processing by ProductsController#buy as HTML
+  Parameters: {"authenticity_token"=>"KomoulMMjhF4hjIJngYZi9xpgKAz79eMx/SI5FnO5OojSn9zFKKOV1LpEjAVcyxV9lcHcMI44IkLzOUB3gBI6w==", "permalink"=>"yealink-t22p"}
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t22p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (2)[0m
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)[0m
+  [1m[35mShoppe::Product Exists (0.2ms)[0m  SELECT  1 AS one FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mShoppe::OrderItem Load (0.3ms)[0m  SELECT  `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 17 AND `shoppe_order_items`.`ordered_item_id` = 2 AND `shoppe_order_items`.`ordered_item_type` = 'Shoppe::Product'  ORDER BY `shoppe_order_items`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM(`shoppe_stock_level_adjustments`.`adjustment`) FROM `shoppe_stock_level_adjustments` WHERE `shoppe_stock_level_adjustments`.`item_id` = 2 AND `shoppe_stock_level_adjustments`.`item_type` = 'Shoppe::Product'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1  [["id", 17]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `shoppe_order_items` (`order_id`, `ordered_item_id`, `ordered_item_type`, `quantity`, `created_at`, `updated_at`) VALUES (17, 2, 'Shoppe::Product', 0, '2016-05-11 04:34:52', '2016-05-11 04:34:52')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `shoppe_orders` SET `shoppe_orders`.`updated_at` = '2016-05-11 04:34:52' WHERE `shoppe_orders`.`id` = 17
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM(`shoppe_stock_level_adjustments`.`adjustment`) FROM `shoppe_stock_level_adjustments` WHERE `shoppe_stock_level_adjustments`.`item_id` = 2 AND `shoppe_stock_level_adjustments`.`item_type` = 'Shoppe::Product'[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM(`shoppe_stock_level_adjustments`.`adjustment`) FROM `shoppe_stock_level_adjustments` WHERE `shoppe_stock_level_adjustments`.`parent_id` = 11 AND `shoppe_stock_level_adjustments`.`parent_type` = 'Shoppe::OrderItem'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM(`shoppe_stock_level_adjustments`.`adjustment`) FROM `shoppe_stock_level_adjustments` WHERE `shoppe_stock_level_adjustments`.`item_id` = 2 AND `shoppe_stock_level_adjustments`.`item_type` = 'Shoppe::Product'[0m  [["item_id", 2], ["item_type", "Shoppe::Product"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM(`shoppe_stock_level_adjustments`.`adjustment`) FROM `shoppe_stock_level_adjustments` WHERE `shoppe_stock_level_adjustments`.`parent_id` = 11 AND `shoppe_stock_level_adjustments`.`parent_type` = 'Shoppe::OrderItem'  [["parent_id", 11], ["parent_type", "Shoppe::OrderItem"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `shoppe_order_items` SET `quantity` = 1, `updated_at` = '2016-05-11 04:34:52' WHERE `shoppe_order_items`.`id` = 11[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE `shoppe_orders` SET `shoppe_orders`.`updated_at` = '2016-05-11 04:34:52' WHERE `shoppe_orders`.`id` = 17
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 17[0m
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` = 2 LIMIT 1
+  [1m[36mShoppe::DeliveryServicePrice Load (25.2ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mShoppe::DeliveryService Load (0.2ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.1ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.1ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/product/yealink-t22p
+Completed 302 Found in 154ms (ActiveRecord: 69.3ms)
+
+
+Started GET "/product/yealink-t22p" for ::1 at 2016-05-10 21:34:52 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t22p"}
+  [1m[36mShoppe::Product Load (0.3ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t22p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.1ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (2)
+  [1m[36mShoppe::Attachment Load (0.2ms)[0m  [1mSELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 2 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 2 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1  [["parent_id", 2], ["parent_type", "Shoppe::Product"], ["role", "default_image"]]
+  [1m[36mShoppe::Product Load (0.2ms)[0m  [1mSELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2[0m
+  [1m[35mShoppe::Setting Load (0.1ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+  Rendered static/product/yealink-t22p/feature.html.erb (0.3ms)
+  Rendered products/show.html.erb within layouts/application (5.3ms)
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)
+  [1m[36mShoppe::Product Load (0.2ms)[0m  [1mSELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` IN (2)[0m
+  [1m[35mShoppe::DeliveryServicePrice Load (5.9ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.1ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.1ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.1ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mShoppe::DeliveryServicePrice Load (0.2ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2[0m  [["parent_id", 2]]
+Completed 200 OK in 67ms (Views: 56.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-10 21:34:52 -0700
+
+
+Started GET "/basket" for ::1 at 2016-05-10 21:34:53 -0700
+Processing by OrdersController#show as HTML
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)[0m
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` IN (2)
+  [1m[36mShoppe::Product::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` = 2[0m
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  [1m[35mShoppe::TaxRate Load (0.2ms)[0m  SELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1
+  [1m[36mShoppe::DeliveryServicePrice Load (5.9ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mShoppe::DeliveryService Load (0.2ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.2ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mShoppe::DeliveryServicePrice Load (0.3ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered orders/_items.html.erb (120.8ms)
+  Rendered orders/show.html.erb within layouts/application (145.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+Completed 200 OK in 208ms (Views: 177.8ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-10 21:34:56 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)[0m
+  [1m[35mShoppe::Product Load (0.1ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` IN (2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1[0m  [["id", 17]]
+  [1m[35mShoppe::OrderItem Load (0.4ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 17
+  [1m[36mShoppe::Product Load (0.3ms)[0m  [1mSELECT  `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` = 2 LIMIT 1[0m
+  [1m[35mShoppe::Product::Translation Load (0.5ms)[0m  SELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` = 2
+  [1m[36mShoppe::Product Load (0.2ms)[0m  [1mSELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2[0m
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+  [1m[36mShoppe::TaxRate Load (0.1ms)[0m  [1mSELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryServicePrice Load (1.6ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.1ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.1ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.1ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mShoppe::DeliveryServicePrice Load (0.3ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1  [["delivery_service_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_tax_rates`.* FROM `shoppe_tax_rates` WHERE `shoppe_tax_rates`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered orders/_items.html.erb (102.1ms)
+  [1m[35mShoppe::Country Load (14.7ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (156.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m  [["delivery_service_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2  [["parent_id", 2]]
+Completed 200 OK in 227ms (Views: 196.3ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-10 21:49:43 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.2ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)
+  [1m[36mShoppe::Product Load (0.1ms)[0m  [1mSELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` IN (2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1  [["id", 17]]
+  Rendered orders/checkout.html.erb within layouts/application (0.9ms)
+  [1m[36mShoppe::DeliveryServicePrice Load (1.9ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mShoppe::DeliveryService Load (0.2ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.2ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mShoppe::DeliveryServicePrice Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m
+  [1m[35mShoppe::Product Load (0.1ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 56ms (Views: 49.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-10 21:49:43 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:50:00 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:50:00 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-10 21:50:00 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-10 21:50:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.0ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-10 21:50:02 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)[0m
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` IN (2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1[0m  [["id", 17]]
+  Rendered orders/checkout.html.erb within layouts/application (0.9ms)
+  [1m[35mShoppe::DeliveryServicePrice Load (2.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.2ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.2ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mShoppe::DeliveryServicePrice Load (0.3ms)[0m  SELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1
+  [1m[36mShoppe::Product Load (0.2ms)[0m  [1mSELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2[0m
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 54ms (Views: 46.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-10 21:50:02 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-10 21:50:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.8ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-10 22:16:17 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (17)
+  [1m[36mShoppe::Product Load (0.2ms)[0m  [1mSELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` IN (2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 17 LIMIT 1  [["id", 17]]
+  Rendered orders/checkout.html.erb within layouts/application (1.0ms)
+  [1m[36mShoppe::DeliveryServicePrice Load (1.7ms)[0m  [1mSELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC[0m
+  [1m[35mShoppe::DeliveryService Load (0.4ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.1ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1[0m
+  [1m[35mShoppe::DeliveryService Load (0.1ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1
+  [1m[36mShoppe::DeliveryService Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` INNER JOIN `shoppe_delivery_services` ON `shoppe_delivery_services`.`id` = `shoppe_delivery_service_prices`.`delivery_service_id` WHERE `shoppe_delivery_services`.`active` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`price` ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_delivery_services`.* FROM `shoppe_delivery_services` WHERE `shoppe_delivery_services`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mShoppe::DeliveryServicePrice Load (0.2ms)[0m  [1mSELECT  `shoppe_delivery_service_prices`.* FROM `shoppe_delivery_service_prices` WHERE `shoppe_delivery_service_prices`.`delivery_service_id` = 1 AND (min_weight <= 1.419 AND max_weight >= 1.419)  ORDER BY `shoppe_delivery_service_prices`.`id` ASC LIMIT 1[0m
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 65ms (Views: 58.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-10 22:16:17 -0700
+
+
+Started GET "/stylesheets/bootstrap.css.map" for ::1 at 2016-05-10 22:16:17 -0700
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/bootstrap.css.map"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.6ms)
