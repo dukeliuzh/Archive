@@ -3,8 +3,7 @@
 
 <%= form_for @order, :url => checkout_path do |f| %>
   <dl>
-    <dt><%= f.label :first_name, 'Name' %></dt>
-    <dd><%= f.text_field :first_name %> <%= f.text_field :last_name %></dd>
+
 
     <dt><%= f.label :billing_address1, 'Address' %></dt>
     <dd><%= f.text_field :billing_address1 %></dd>

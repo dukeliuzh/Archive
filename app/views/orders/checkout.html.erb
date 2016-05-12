@@ -333,7 +333,6 @@
 
 <%= form_for @order, :url => checkout_path do |f| %>
 
-
         <div class="col-md-8 add_bottom_15">
             <div class="form_title">
                 <h3><strong>1</strong>Your Details</h3>
@@ -379,9 +378,7 @@
                     </div>
                 </div>
             </div><!--End step -->
-            
 
-            
             <div class="form_title">
                 <h3><strong>2</strong>Billing Address</h3>
                 <p>
@@ -425,6 +422,8 @@
                             <%= f.text_field :billing_address4, :class=>"form-control", :id=>"state_booking", :name=>"state_booking" %>                             
                         </div>
                     </div>
+
+
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Postal code</label>
@@ -442,6 +441,8 @@
                 <a><%= f.submit 'Continue', :class=>"btn_1 green medium" %></a>
             </div>
         </div>
+
+
 
 <% end %>
 

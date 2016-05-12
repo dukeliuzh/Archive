@@ -31445,3 +31445,1092 @@ Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065
 
 
 Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:13:34 -0700
+
+
+Started GET "/" for ::1 at 2016-05-11 22:19:40 -0700
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for ::1 at 2016-05-11 22:19:41 -0700
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/apple-touch-icon.png" for ::1 at 2016-05-11 22:19:41 -0700
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/ninahuang/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run_machine'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.5) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.5) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.5) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<main>'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-11 22:20:37 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (7.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mSQL (14.0ms)[0m  SELECT `shoppe_products`.`id` AS t0_r0, `shoppe_products`.`parent_id` AS t0_r1, `shoppe_products`.`name` AS t0_r2, `shoppe_products`.`sku` AS t0_r3, `shoppe_products`.`permalink` AS t0_r4, `shoppe_products`.`description` AS t0_r5, `shoppe_products`.`short_description` AS t0_r6, `shoppe_products`.`active` AS t0_r7, `shoppe_products`.`weight` AS t0_r8, `shoppe_products`.`price` AS t0_r9, `shoppe_products`.`cost_price` AS t0_r10, `shoppe_products`.`tax_rate_id` AS t0_r11, `shoppe_products`.`created_at` AS t0_r12, `shoppe_products`.`updated_at` AS t0_r13, `shoppe_products`.`featured` AS t0_r14, `shoppe_products`.`in_the_box` AS t0_r15, `shoppe_products`.`stock_control` AS t0_r16, `shoppe_products`.`default` AS t0_r17, `shoppe_product_translations`.`id` AS t1_r0, `shoppe_product_translations`.`shoppe_product_id` AS t1_r1, `shoppe_product_translations`.`locale` AS t1_r2, `shoppe_product_translations`.`created_at` AS t1_r3, `shoppe_product_translations`.`updated_at` AS t1_r4, `shoppe_product_translations`.`name` AS t1_r5, `shoppe_product_translations`.`permalink` AS t1_r6, `shoppe_product_translations`.`description` AS t1_r7, `shoppe_product_translations`.`short_description` AS t1_r8, `shoppe_product_categories`.`id` AS t2_r0, `shoppe_product_categories`.`name` AS t2_r1, `shoppe_product_categories`.`permalink` AS t2_r2, `shoppe_product_categories`.`description` AS t2_r3, `shoppe_product_categories`.`created_at` AS t2_r4, `shoppe_product_categories`.`updated_at` AS t2_r5, `shoppe_product_categories`.`parent_id` AS t2_r6, `shoppe_product_categories`.`lft` AS t2_r7, `shoppe_product_categories`.`rgt` AS t2_r8, `shoppe_product_categories`.`depth` AS t2_r9, `shoppe_product_categories`.`ancestral_permalink` AS t2_r10, `shoppe_product_categories`.`permalink_includes_ancestors` AS t2_r11, `variants_shoppe_products`.`id` AS t3_r0, `variants_shoppe_products`.`parent_id` AS t3_r1, `variants_shoppe_products`.`name` AS t3_r2, `variants_shoppe_products`.`sku` AS t3_r3, `variants_shoppe_products`.`permalink` AS t3_r4, `variants_shoppe_products`.`description` AS t3_r5, `variants_shoppe_products`.`short_description` AS t3_r6, `variants_shoppe_products`.`active` AS t3_r7, `variants_shoppe_products`.`weight` AS t3_r8, `variants_shoppe_products`.`price` AS t3_r9, `variants_shoppe_products`.`cost_price` AS t3_r10, `variants_shoppe_products`.`tax_rate_id` AS t3_r11, `variants_shoppe_products`.`created_at` AS t3_r12, `variants_shoppe_products`.`updated_at` AS t3_r13, `variants_shoppe_products`.`featured` AS t3_r14, `variants_shoppe_products`.`in_the_box` AS t3_r15, `variants_shoppe_products`.`stock_control` AS t3_r16, `variants_shoppe_products`.`default` AS t3_r17 FROM `shoppe_products` LEFT OUTER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` LEFT OUTER JOIN `shoppe_product_categorizations` ON `shoppe_product_categorizations`.`product_id` = `shoppe_products`.`id` LEFT OUTER JOIN `shoppe_product_categories` ON `shoppe_product_categories`.`id` = `shoppe_product_categorizations`.`product_category_id` LEFT OUTER JOIN `shoppe_products` `variants_shoppe_products` ON `variants_shoppe_products`.`parent_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL  ORDER BY shoppe_product_translations.name
+  [1m[36mShoppe::ProductCategory::Translation Load (1.0ms)[0m  [1mSELECT `shoppe_product_category_translations`.* FROM `shoppe_product_category_translations` WHERE `shoppe_product_category_translations`.`shoppe_product_category_id` = 1[0m
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`id` = 5 LIMIT 1
+  [1m[36mShoppe::Setting Load (17.9ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  [1m[35mShoppe::ProductCategory::Translation Load (0.2ms)[0m  SELECT `shoppe_product_category_translations`.* FROM `shoppe_product_category_translations` WHERE `shoppe_product_category_translations`.`shoppe_product_category_id` = 2
+  Rendered products/index.html.erb within layouts/application (232.8ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `shoppe_orders` (`ip_address`, `status`, `token`, `created_at`, `updated_at`) VALUES ('::1', 'building', '136857d0-7ab7-4db4-b668-4f1b5e6e8825', '2016-05-12 05:20:38', '2016-05-12 05:20:38')
+  [1m[36mNifty::KeyValueStore::KeyValuePair Load (0.2ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 680ms (Views: 396.0ms | ActiveRecord: 124.9ms)
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:20:38 -0700
+
+
+Started GET "/product/yealink-t26p" for ::1 at 2016-05-11 22:20:43 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t26p"}
+  [1m[35mShoppe::Product Load (23.6ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t26p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.3ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (3)[0m
+  [1m[35mShoppe::Attachment Load (0.2ms)[0m  SELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 3 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 3 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1[0m  [["parent_id", 3], ["parent_type", "Shoppe::Product"], ["role", "default_image"]]
+  [1m[35mShoppe::Product Load (0.3ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 3
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  Rendered products/show.html.erb within layouts/application (633.1ms)
+Completed 500 Internal Server Error in 710ms (ActiveRecord: 45.4ms)
+
+ActionView::Template::Error (Missing template static/product/yealink-t26p/feature.html.erb with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/Users/ninahuang/Zheng/TourJoys/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/shoppe-1.1.2/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/kaminari-0.16.3/app/views"
+  * "/Users/ninahuang/Zheng/TourJoys"
+  * "/"
+):
+    16: 
+    17: <p><%= link_to "Back to list", root_path %></p>
+    18: 
+    19: <%= render :file => @path  %>
+  app/views/products/show.html.erb:19:in `_app_views_products_show_html_erb__1363987708178113755_70269510083540'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/product/yealink-t26p" for ::1 at 2016-05-11 22:20:44 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t26p"}
+  [1m[35mShoppe::Product Load (0.6ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t26p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (3)[0m
+  [1m[35mShoppe::Attachment Load (0.4ms)[0m  SELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 3 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 3 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1[0m  [["parent_id", 3], ["parent_type", "Shoppe::Product"], ["role", "default_image"]]
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 3
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  Rendered products/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (Missing template static/product/yealink-t26p/feature.html.erb with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/Users/ninahuang/Zheng/TourJoys/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/shoppe-1.1.2/app/views"
+  * "/Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/kaminari-0.16.3/app/views"
+  * "/Users/ninahuang/Zheng/TourJoys"
+  * "/"
+):
+    16: 
+    17: <p><%= link_to "Back to list", root_path %></p>
+    18: 
+    19: <%= render :file => @path  %>
+  app/views/products/show.html.erb:19:in `_app_views_products_show_html_erb__1363987708178113755_70269558294540'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.1ms)
+
+
+Started GET "/product/yealink-t22p" for ::1 at 2016-05-11 22:20:47 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"permalink"=>"yealink-t22p"}
+  [1m[35mShoppe::Product Load (0.4ms)[0m  SELECT  `shoppe_products`.* FROM `shoppe_products` INNER JOIN `shoppe_product_translations` ON `shoppe_product_translations`.`shoppe_product_id` = `shoppe_products`.`id` WHERE `shoppe_products`.`parent_id` IS NULL AND `shoppe_product_translations`.`permalink` = 'yealink-t22p' AND `shoppe_product_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mShoppe::Product::Translation Load (0.2ms)[0m  [1mSELECT `shoppe_product_translations`.* FROM `shoppe_product_translations` WHERE `shoppe_product_translations`.`shoppe_product_id` IN (2)[0m
+  [1m[35mShoppe::Attachment Load (0.2ms)[0m  SELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 2 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_attachments`.* FROM `shoppe_attachments` WHERE `shoppe_attachments`.`parent_id` = 2 AND `shoppe_attachments`.`parent_type` = 'Shoppe::Product' AND `shoppe_attachments`.`role` = 'default_image'  ORDER BY `shoppe_attachments`.`id` ASC LIMIT 1[0m  [["parent_id", 2], ["parent_type", "Shoppe::Product"], ["role", "default_image"]]
+  [1m[35mShoppe::Product Load (0.2ms)[0m  SELECT `shoppe_products`.* FROM `shoppe_products` WHERE `shoppe_products`.`parent_id` = 2
+  [1m[36mShoppe::Setting Load (0.1ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  Rendered static/product/yealink-t22p/feature.html.erb (0.3ms)
+  Rendered products/show.html.erb within layouts/application (24.8ms)
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+Completed 200 OK in 96ms (Views: 91.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:20:49 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36mShoppe::Country Load (12.4ms)[0m  [1mSELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC[0m
+  Rendered orders/checkout.html.erb within layouts/application (174.7ms)
+  [1m[35mShoppe::Setting Load (0.3ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 217ms (Views: 200.6ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:20:56 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.9ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (11.8ms)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:20:56 -0700
+
+
+Started PATCH "/checkout" for ::1 at 2016-05-11 22:21:37 -0700
+Processing by OrdersController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6QD+0TK2YeaMaeE+1VT50whWiMChJWLqdkoFvYgdUWK24zWTTvpgOhw22axMvz+dho83OjSJrFSVBn0Icb5eCg==", "order"=>{"first_name"=>"Zhe", "last_name"=>"we", "billing_address1"=>"asdasd", "billing_address2"=>"asdasd", "billing_address3"=>"asdasd", "billing_address4"=>"sadasd", "billing_postcode"=>"8834234", "billing_country_id"=>"11", "email_address"=>"dsfsd@gmail.com", "phone_number"=>"1232131"}, "commit"=>"Continue"}
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mShoppe::Country Load (0.2ms)[0m  SELECT  `shoppe_countries`.* FROM `shoppe_countries` WHERE `shoppe_countries`.`id` = 11 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 18[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `shoppe_orders` SET `status` = 'confirming', `first_name` = 'Zhe', `last_name` = 'we', `billing_address1` = 'asdasd', `billing_address2` = 'asdasd', `billing_address3` = 'asdasd', `billing_address4` = 'sadasd', `billing_country_id` = 11, `billing_postcode` = '8834234', `email_address` = 'dsfsd@gmail.com', `phone_number` = '1232131', `updated_at` = '2016-05-12 05:21:37' WHERE `shoppe_orders`.`id` = 18
+  [1m[36mNifty::KeyValueStore::KeyValuePair Load (0.2ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/checkout/pay
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/checkout/pay" for ::1 at 2016-05-11 22:21:37 -0700
+Processing by OrdersController#payment as HTML
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  Rendered orders/payment.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 52.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:21:37 -0700
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:21:40 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.4ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36mShoppe::Country Load (0.7ms)[0m  [1mSELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC[0m
+  Rendered orders/checkout.html.erb within layouts/application (10.0ms)
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:23:16 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.7ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (12.2ms)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:23:16 -0700
+
+
+Started PATCH "/checkout" for ::1 at 2016-05-11 22:23:22 -0700
+Processing by OrdersController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XYSGshNCNpoDB6PrR1LGCW/aQzPdOvJybjK4rMWPfUkCZ03wbw43RpNYm3neuQBH4QP8yUiWPMyNfsAZPCxyIQ==", "firstname_booking"=>"Zhe", "lastname_booking"=>"we", "order"=>{"billing_address1"=>"asdasd", "billing_address2"=>"asdasd", "billing_address3"=>"asdasd", "billing_address4"=>"sadasd", "billing_postcode"=>"8834234", "billing_country_id"=>"11", "email_address"=>"dsfsd@gmail.com", "phone_number"=>"1232131"}, "commit"=>"Continue"}
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mShoppe::Country Load (0.1ms)[0m  SELECT  `shoppe_countries`.* FROM `shoppe_countries` WHERE `shoppe_countries`.`id` = 11 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 18[0m
+  [1m[35mNifty::KeyValueStore::KeyValuePair Load (0.2ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/checkout/pay
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/checkout/pay" for ::1 at 2016-05-11 22:23:22 -0700
+Processing by OrdersController#payment as HTML
+  [1m[36mShoppe::Setting Load (0.3ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  Rendered orders/payment.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:23:22 -0700
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:23:24 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.7ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (11.6ms)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:24:29 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36mShoppe::Country Load (0.7ms)[0m  [1mSELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC[0m
+  Rendered orders/checkout.html.erb within layouts/application (14.7ms)
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:24:29 -0700
+
+
+Started PATCH "/checkout" for ::1 at 2016-05-11 22:24:32 -0700
+Processing by OrdersController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8XPReIEOwT74Hny68VLKW9rOLPomXsfXlAlr4DLes/IJgQHnkg62Gu/QWByLo1n4bKHSX01taG9HF0aeWh1pw==", "firstname_booking"=>"Zhe", "lastname_booking"=>"we", "email_booking"=>"dsfsd@gmail.com", "email_booking_2"=>"", "telephone_booking"=>"1232131", "order"=>{"billing_address1"=>"asdasd", "billing_address2"=>"asdasd", "billing_address3"=>"asdasd", "billing_address4"=>"sadasd", "billing_postcode"=>"8834234", "billing_country_id"=>"11"}, "commit"=>"Continue"}
+  [1m[36mShoppe::Order Load (0.2ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mShoppe::Country Load (0.1ms)[0m  [1mSELECT  `shoppe_countries`.* FROM `shoppe_countries` WHERE `shoppe_countries`.`id` = 11 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 18
+  [1m[36mNifty::KeyValueStore::KeyValuePair Load (0.1ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/checkout/pay
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/checkout/pay" for ::1 at 2016-05-11 22:24:32 -0700
+Processing by OrdersController#payment as HTML
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+  [1m[36mShoppe::Order Load (0.2ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  Rendered orders/payment.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:24:32 -0700
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:24:34 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36mShoppe::Country Load (0.7ms)[0m  [1mSELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC[0m
+  Rendered orders/checkout.html.erb within layouts/application (11.5ms)
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:26:17 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.6ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (10.0ms)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:26:17 -0700
+
+
+Started PATCH "/checkout" for ::1 at 2016-05-11 22:26:22 -0700
+Processing by OrdersController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1QZ29UpKa2GjxuxgYhWobUerb2BHZtWfHQiPK+z/0viK5b23NgZqvTOZ1PL7/m4jyXLQmtLKGyH+RPeeFVzdkA==", "firstname_booking"=>"Zhe", "lastname_booking"=>"we", "email_booking"=>"dsfsd@gmail.com", "email_booking_2"=>"", "telephone_booking"=>"1232131", "order"=>{"billing_country_id"=>"11", "billing_address1"=>"asdasd", "billing_address2"=>"asdasd", "billing_address3"=>"asdasd", "billing_address4"=>"sadasd", "billing_postcode"=>"8834234"}, "commit"=>"Continue"}
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mShoppe::Country Load (0.2ms)[0m  SELECT  `shoppe_countries`.* FROM `shoppe_countries` WHERE `shoppe_countries`.`id` = 11 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 18[0m
+  [1m[35mNifty::KeyValueStore::KeyValuePair Load (0.1ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/checkout/pay
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/checkout/pay" for ::1 at 2016-05-11 22:26:22 -0700
+Processing by OrdersController#payment as HTML
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  Rendered orders/payment.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:26:22 -0700
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:26:24 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.4ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.7ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (11.6ms)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:27:13 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36mShoppe::Country Load (0.9ms)[0m  [1mSELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC[0m
+  Rendered orders/checkout.html.erb within layouts/application (11.2ms)
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:27:13 -0700
+
+
+Started PATCH "/checkout" for ::1 at 2016-05-11 22:27:17 -0700
+Processing by OrdersController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cPS+E99PkWrcaWEt6mPvun/L+P08SMC+t8AY0Dvtkz4vF3VRowOQtkw2Wb9ziCn08RJHB6nkDgBUjGBlwk6cVg==", "firstname_booking"=>"Zhe", "lastname_booking"=>"we", "email_booking"=>"dsfsd@gmail.com", "email_booking_2"=>"", "telephone_booking"=>"1232131", "order"=>{"billing_country_id"=>"11", "billing_postcode"=>"8834234"}, "street_1"=>"asdasd", "street_2"=>"asdasd", "city_booking"=>"asdasd", "state_booking"=>"sadasd", "commit"=>"Continue", "lang"=>"English", "currency"=>"USD"}
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mShoppe::Country Load (0.2ms)[0m  [1mSELECT  `shoppe_countries`.* FROM `shoppe_countries` WHERE `shoppe_countries`.`id` = 11 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 18
+  [1m[36mNifty::KeyValueStore::KeyValuePair Load (0.2ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/checkout/pay
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/checkout/pay" for ::1 at 2016-05-11 22:27:17 -0700
+Processing by OrdersController#payment as HTML
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+  [1m[36mShoppe::Order Load (0.2ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.1ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  Rendered orders/payment.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:27:17 -0700
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:27:19 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[35mShoppe::Order Load (0.3ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36mShoppe::Country Load (0.7ms)[0m  [1mSELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC[0m
+  Rendered orders/checkout.html.erb within layouts/application (11.7ms)
+  [1m[35mShoppe::Setting Load (0.2ms)[0m  SELECT `shoppe_settings`.* FROM `shoppe_settings`
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:28:44 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.7ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (10.3ms)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:28:44 -0700
+
+
+Started PATCH "/checkout" for ::1 at 2016-05-11 22:28:48 -0700
+Processing by OrdersController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UL71yFORENzI7Uycee2QnRRuKlKoPYQkzZ4x26fhl+YPXT6KL90RAFiydA7gBlbTmreVqD2RSpou0kluXkKYjg==", "firstname_booking"=>"Zhe", "lastname_booking"=>"we", "email_booking"=>"dsfsd@gmail.com", "email_booking_2"=>"", "telephone_booking"=>"1232131", "order"=>{"billing_country_id"=>"11"}, "street_1"=>"asdasd", "street_2"=>"asdasd", "city_booking"=>"asdasd", "state_booking"=>"sadasd", "postal_code"=>"8834234", "commit"=>"Continue"}
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mShoppe::Country Load (0.1ms)[0m  SELECT  `shoppe_countries`.* FROM `shoppe_countries` WHERE `shoppe_countries`.`id` = 11 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 18[0m
+  [1m[35mNifty::KeyValueStore::KeyValuePair Load (0.1ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/checkout/pay
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/checkout/pay" for ::1 at 2016-05-11 22:28:48 -0700
+Processing by OrdersController#payment as HTML
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  Rendered orders/payment.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:28:48 -0700
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:28:50 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.3ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.3ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.7ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (11.1ms)
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/checkout" for ::1 at 2016-05-11 22:29:04 -0700
+Processing by OrdersController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JutR7ytapteCkLUxJN0OmQv4wCQr5SMcY5iMVrNQrmZ5CJqtVxanCxLPjaO9NsjXhSF/3r5J7aKA1PTjSvOhDg==", "firstname_booking"=>"Zhe", "lastname_booking"=>"we", "email_booking"=>"dsfsd@gmail.com", "email_booking_2"=>"", "telephone_booking"=>"1232131", "order"=>{"billing_country_id"=>"11"}, "street_1"=>"asdasd", "street_2"=>"asdasd", "city_booking"=>"asdasd", "state_booking"=>"sadasd", "postal_code"=>"8834234", "commit"=>"Continue"}
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mShoppe::Country Load (0.1ms)[0m  SELECT  `shoppe_countries`.* FROM `shoppe_countries` WHERE `shoppe_countries`.`id` = 11 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.1ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` = 18[0m
+  [1m[35mNifty::KeyValueStore::KeyValuePair Load (0.1ms)[0m  SELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nifty_key_value_store`.* FROM `nifty_key_value_store` WHERE `nifty_key_value_store`.`parent_id` = 18 AND `nifty_key_value_store`.`parent_type` = 'Shoppe::Order' AND `nifty_key_value_store`.`group` = 'properties'[0m  [["parent_id", 18], ["parent_type", "Shoppe::Order"], ["group", :properties]]
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/checkout/pay
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/checkout/pay" for ::1 at 2016-05-11 22:29:04 -0700
+Processing by OrdersController#payment as HTML
+  [1m[36mShoppe::Setting Load (0.2ms)[0m  [1mSELECT `shoppe_settings`.* FROM `shoppe_settings`[0m
+  [1m[35mShoppe::Order Load (0.2ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1
+  [1m[36mShoppe::OrderItem Load (0.2ms)[0m  [1mSELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1  [["id", 18]]
+  Rendered orders/payment.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 49ms (Views: 41.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/orders-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/products-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/application-d1a275ef14480a2e8dbf7788b244d24c.css?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/orders-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/shoppe/stripe/form_handler-5990d2b5c5762b2ceb24661f74bcc065.js?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/assets/application-8c2af0de2699f46715157e6a4022477d.js?body=1" for ::1 at 2016-05-11 22:29:04 -0700
+
+
+Started GET "/checkout" for ::1 at 2016-05-11 22:36:55 -0700
+Processing by OrdersController#checkout as HTML
+  [1m[36mShoppe::Order Load (0.2ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m
+  [1m[35mShoppe::OrderItem Load (0.2ms)[0m  SELECT `shoppe_order_items`.* FROM `shoppe_order_items` WHERE `shoppe_order_items`.`order_id` IN (18)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `shoppe_orders`.* FROM `shoppe_orders` WHERE `shoppe_orders`.`id` = 18 LIMIT 1[0m  [["id", 18]]
+  [1m[35mShoppe::Country Load (0.8ms)[0m  SELECT `shoppe_countries`.* FROM `shoppe_countries`  ORDER BY `shoppe_countries`.`name` ASC
+  Rendered orders/checkout.html.erb within layouts/application (41.5ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `terms_of_service' for #<Shoppe::Order:0x007fd1ca5b6d48>):
+    436:             <div id="policy">
+    437:                 z<h4>Cancellation policy</h4>
+    438:                     <div class="form-group">
+    439:                         <label><%= f.check_box :terms_of_service %>I accept terms and conditions and general policy.</label>
+    440:                     </div>
+    441:                 <a><%= f.submit 'Continue', :class=>"btn_1 green medium" %></a>
+    442:             </div>
+  app/views/orders/checkout.html.erb:439:in `block in _app_views_orders_checkout_html_erb__1883777590944643174_70269509936240'
+  app/views/orders/checkout.html.erb:334:in `_app_views_orders_checkout_html_erb__1883777590944643174_70269509936240'
+
+
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/ninahuang/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.3ms)
