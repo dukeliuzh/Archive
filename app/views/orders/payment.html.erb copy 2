@@ -338,65 +338,24 @@
                 <p>
                     Mussum ipsum cacilds, vidis litro abertis.
                 </p>
-        </div>
-
-        <div class="step">
-          <div class="form-group">
-            <label>Name on card</label>
-            <input type="text" class="form-control" id="name_card_bookign" name="name_card_bookign">
-          </div>
-
-    <%= shoppe_stripe_javascript %>
-        <%= form_tag nil, class: "stripeForm" do %>
-         <%= hidden_field_tag "stripe_token", nil, "data-stripe" => "token" %>
-
-
-          <div class="row">
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <label>Card number</label>
-                <%= text_field_tag 'card_number', nil, name: nil, "data-stripe" => "number", :class=>"form-control" %>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <img src="/images/cards.png" width="207" height="43" alt="Cards" class="cards">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <label>Expiration date</label>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <%= text_field_tag 'expiry_month', nil, name: nil, "data-stripe" => "exp-month", :class=>"form-control", :placeholder=>"MM" %>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <%= text_field_tag 'expiry_year', nil, name: nil, "data-stripe" => "exp-year", :class=>"form-control", :placeholder=>"Year" %>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Security code</label>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <%= text_field_tag 'security_code', nil, name: nil, "data-stripe" => "cvc", :class=>"form-control", :placeholder=>"CCV" %>
-                    </div>
-                  </div>
-                  <div class="col-md-8">
-                    <img src="/images/icon_ccv.gif" width="50" height="29" alt="ccv"><small>Last 3 digits</small>
-                  </div>
-                </div>
-              </div>
-              <%= submit_tag "Continue", :class=>"btn_full" %>
             </div>
 
-          </div><!--End row -->
-    <% end %>
+<%= form_tag nil, class: "stripeForm" do %>
+    <%= hidden_field_tag "stripe_token", nil, "data-stripe" => "token" %>
+
+    <dl>
+      <dt><%= label_tag 'card_number' %></dt>
+      <dd><%= text_field_tag 'card_number', nil, name: nil, "data-stripe" => "number" %></dd>
+      <dt><%= label_tag 'expiry_month' %></dt>
+      <dd><%= text_field_tag 'expiry_month', nil, name: nil, "data-stripe" => "exp_month" %></dd>
+      <dt><%= label_tag 'expiry_year' %></dt>
+      <dd><%= text_field_tag 'expiry_year', nil, name: nil, "data-stripe" => "exp_year" %></dd>
+      <dt><%= label_tag 'security_code' %></dt>
+      <dd><%= text_field_tag 'security_code', nil, name: nil, "data-stripe" => "cvc" %></dd>
+      <dd><%= submit_tag "Continue" %></dd>
+    </dl>
+    
+<% end %>
                 <hr>
                 
                 <h4>Or checkout with Paypal</h4>

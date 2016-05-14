@@ -21,15 +21,15 @@ class OrdersController < ApplicationController
 
 	def payment
 	  @order = Shoppe::Order.find(current_order.id)
-	  if params[:success] == "true" && params[:PayerID].present?
-		  @order.accept_paypal_payment(params[:paymentId], params[:token], params[:PayerID])
-	  end
 	  if request.post?
 	    if @order.accept_stripe_token(params[:stripe_token])
 	      redirect_to checkout_confirmation_path
 	    else
 	      flash.now[:notice] = "Could not exchange Stripe token. Please try again."
 	    end
+	  end
+	  	  if params[:success] == "true" && params[:PayerID].present?
+		  @order.accept_paypal_payment(params[:paymentId], params[:token], params[:PayerID])
 	  end
 	end
 
