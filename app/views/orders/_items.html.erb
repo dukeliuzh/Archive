@@ -1,47 +1,122 @@
-<table width='100%' border='1'>
-  <thead>
-    <tr>
-      <td>Quantity</td>
-      <td>Product</td>
-      <td>Sub-Total</td>
-      <td>Tax</td>
-      <td>Total</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% order.order_items.each do |item| %>
-    <tr>
-      <td><%= item.quantity %></td>
-      <td><%= item.ordered_item.full_name %></td>
-      <td><%= number_to_currency item.sub_total %></td>
-      <td><%= number_to_currency item.tax_amount %></td>
-      <td><%= number_to_currency item.total %></td>
-    </tr>
-    <% end %>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="template, tour template, city tours, city tour, tours tickets, transfers, travel, travel template" />
+    <meta name="description" content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
+    <meta name="author" content="Ansonika">
+    <title>CITY TOURS - City tours and travel site template by Ansonika</title>
+    
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="/images/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
 
-    <% if order.delivery_service %>
-    <tr>
-      <td></td>
-      <td><%= order.delivery_service.name %></td>
-      <td><%= number_to_currency order.delivery_price %></td>
-      <td><%= number_to_currency order.delivery_tax_amount %></td>
-      <td><%= number_to_currency order.delivery_price + order.delivery_tax_amount %></td>
-    </tr>
-    <% end %>
+    <!-- CSS -->
+    <link href="/stylesheets/base.css" rel="stylesheet">
+    
+    <!-- Radio and check inputs -->
+    <link href="/stylesheets/skins/square/grey.css" rel="stylesheet">
+    
+    <!-- Google web fonts -->
+   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+        
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
 
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan='4'>Sub-Total</td>
-      <td><%= number_to_currency order.total_before_tax %></td>
-    </tr>
-    <tr>
-      <td colspan='4'>Tax</td>
-      <td><%= number_to_currency order.tax %></td>
-    </tr>
-    <tr>
-      <td colspan='4'>Total</td>
-      <td><%= number_to_currency order.total %></td>
-    </tr>
-  </tfoot>
-</table>
+        <aside class="col-md-4">
+        <div class="box_style_1">
+            <h3 class="inner">- Summary -</h3>
+            <table class="table table_summary">
+            <tbody>
+            <tr>
+                <td>
+                    <strong>Product</strong>
+                </td>
+                <td class="text-right">
+                    <strong>Quantity</strong>
+                </td>
+            </tr>
+
+            <% order.order_items.each do |item| %>    
+            <tr>
+                <td>
+                    <%= item.ordered_item.full_name %>
+                </td>
+                <td class="text-right">
+                    <%= item.quantity %>
+                </td>
+            </tr>
+            <% end %>
+
+
+            <tr>
+                <td>
+                    <strong>Subtotal</strong>
+                </td>
+                <td class="text-right">
+                    <%= number_to_currency order.total_before_tax %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Tax</strong>
+                </td>
+                <td class="text-right">
+                    <%= number_to_currency order.tax %>
+                </td>
+            </tr>
+
+
+            <tr class="total">
+                <td>
+                    Total cost
+                </td>
+                <td class="text-right">
+                    <%= number_to_currency order.total %>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <%= link_to "Continue shopping", {:action => 'index', :controller => 'products'}, :class=>"icon-right btn_full_outline" %>
+        </div>
+        <div class="box_style_4">
+            <i class="icon_set_1_icon-57"></i>
+            <h4>Need <span>Help?</span></h4>
+            <a href="tel://004542344599" class="phone">+45 423 445 99</a>
+            <small>Monday to Friday 9.00am - 7.30pm</small>
+        </div>
+        </aside>
+
+
+<div id="toTop"></div><!-- Back to top button -->
+
+<!-- Common scripts -->
+<script src="/javascripts/jquery-1.11.2.min.js"></script>
+<script src="/javascripts/common_scripts_min.js"></script>
+<script src="/javascripts/functions.js"></script>
+
+<!-- Specific scripts -->
+<script src="/javascripts/icheck.js"></script>
+<script>  
+$('input').iCheck({
+   checkboxClass: 'icheckbox_square-grey',
+   radioClass: 'iradio_square-grey'
+ });
+ </script>
+
+  </body>
+</html>

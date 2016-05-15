@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
 	      flash.now[:notice] = "Could not exchange Stripe token. Please try again."
 	    end
 	  end
-	  	  if params[:success] == "true" && params[:PayerID].present?
+	   if params[:success] == "true" && params[:PayerID].present?
 		  @order.accept_paypal_payment(params[:paymentId], params[:token], params[:PayerID])
 	  end
 	end
