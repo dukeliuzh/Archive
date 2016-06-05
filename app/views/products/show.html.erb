@@ -518,7 +518,8 @@
             </tr>
             </tbody>
             </table>
-            <a class="btn_full" href="cart.html">Book now</a>
+            <%= link_to "Add to basket", product_path(@product.permalink), :method => :post, :class=>"btn_full" %>
+
             <a class="btn_full_outline" href="#"><i class=" icon-heart"></i> Add to whislist</a>
         </div><!--/box_style_1 -->
         
