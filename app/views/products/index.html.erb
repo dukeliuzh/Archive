@@ -146,7 +146,7 @@
                 <div class="tour_container">
                     <div class="img_container">
                         <a href="single_tour.html">
-                            <%= image_tag product.default_image.path, :class=>"img-responsive", :alt=>"" , :width => '200px'%>
+                            <%= link_to image_tag(product.default_image.path ), product_path(product.permalink), :class=>"img-responsive", :alt=>"" , :width => '200px'%>
                         <div class="ribbon top_rated"></div>
                         <div class="short_info">
                             <i class="icon_set_1_icon-44"></i>Historic Buildings<span class="price"><sup>$</sup>39</span>
